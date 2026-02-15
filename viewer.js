@@ -1,5 +1,4 @@
 const viewerElement = document.getElementById('viewer');
-
 const viewer = new Marzipano.Viewer(viewerElement);
 
 const source = Marzipano.ImageUrlSource.fromString(
@@ -7,7 +6,11 @@ const source = Marzipano.ImageUrlSource.fromString(
 );
 
 const geometry = new Marzipano.EquirectGeometry([{ width: 4000 }]);
-const limiter = Marzipano.RectilinearView.limit.traditional(1024, 120*Math.PI/180);
+const limiter = Marzipano.RectilinearView.limit.traditional(
+  1024,
+  120 * Math.PI / 180
+);
+
 const view = new Marzipano.RectilinearView(null, limiter);
 
 const scene = viewer.createScene({
@@ -17,6 +20,9 @@ const scene = viewer.createScene({
 });
 
 scene.switchTo();
+
+/* إتاحة الكاميرا لبقية النظام */
+window.appView = view;
 
 /* ===============================
    LOAD ELECTRICAL DATA
@@ -33,25 +39,8 @@ fetch('data/architectural.json')
         'http://www.w3.org/2000/svg',
         'path'
       );
-
       path.setAttribute('d', line.path);
       path.setAttribute('class', 'electrical-path');
-
       svg.appendChild(path);
     });
-  
-window.appView = view;
-
-/* ===============================
-   ELECTRICAL TOGGLE BUTTON
-   =============================== */
-
-const btn = document.getElementById('toggle-electric');
-const elLayer = document.getElementById('electrical-layer');
-
-if (btn && elLayer) {
-  btn.onclick = () => {
-    elLayer.style.display =
-      elLayer.style.display === 'none' ? 'block' : 'none';
-  };
-}
+  });
