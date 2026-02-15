@@ -8,12 +8,14 @@
 <body>
 
 <div id="viewer"></div>
+
 <div id="data-overlay">
   <div class="panel">
     <h3>Architectural Data</h3>
     <p>Select a system layer</p>
   </div>
 </div>
+
 <div id="overlay">
   <svg id="walls-layer"></svg>
   <svg id="electrical-layer"></svg>
@@ -23,7 +25,9 @@
   <button id="toggleWalls">إظهار / إخفاء الجدران</button>
 </div>
 
+<!-- يجب أن يكون أولًا -->
 <script src="vendor/marzipano.js"></script>
+
 <script src="viewer.js"></script>
 <script src="layers/walls.js"></script>
 <script src="ui.js"></script>
