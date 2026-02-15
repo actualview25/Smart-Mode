@@ -1,0 +1,83 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#viewer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#walls-layer {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+/* ===============================
+   DATA / ARCHITECTURAL OVERLAY
+   =============================== */
+
+#data-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.panel {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 260px;
+  background: rgba(15,18,25,0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,209,255,0.3);
+  border-radius: 12px;
+  padding: 16px;
+  color: #E8ECF1;
+  font-family: "Inter", Arial, sans-serif;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* ===============================
+   ELECTRICAL LAYER
+   =============================== */
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+#electrical-layer {
+  width: 100%;
+  height: 100%;
+}
+
+.electrical-path {
+  fill: none;
+  stroke: #FFD400;
+  stroke-width: 3;
+  stroke-dasharray: 8 6;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 6px rgba(255,212,0,0.6));
+}

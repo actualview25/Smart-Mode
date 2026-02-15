@@ -1,0 +1,27 @@
+{
+  "walls": [
+    {
+      "id": "wall-1",
+      "yaw": 0.3,
+      "pitch": 0.05,
+      "thickness": "25 cm",
+      "type": "خرسانة",
+      "note": "جدار حامل"
+    },
+    {
+      "id": "wall-2",
+      "yaw": -0.8,
+      "pitch": 0.1,
+      "thickness": "15 cm",
+      "type": "طوب",
+      "note": "قابل للتعديل"
+  ],
+
+  "electrical": [
+    {
+      "id": "main-line",
+      "path": "M120 180 L420 180 L420 360",
+      "label": "Main Power Line"
+      }
+   ]
+}

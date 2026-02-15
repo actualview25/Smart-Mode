@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <title>Invisible Layer 360 – Free Mode</title>
+  <link rel="stylesheet" href="css/free-mode.css">
+</head>
+<body>
+
+<div id="viewer"></div>
+<div id="data-overlay">
+  <div class="panel">
+    <h3>Architectural Data</h3>
+    <p>Select a system layer</p>
+  </div>
+</div>
+<div id="overlay">
+  <svg id="walls-layer"></svg>
+  <svg id="electrical-layer"></svg>
+</div>
+
+<div class="controls">
+  <button id="toggleWalls">إظهار / إخفاء الجدران</button>
+</div>
+
+<script src="../vendor/marzipano.js"></script>
+<script src="../vendor/hammer.min.js"></script>
+
+<script src="viewer.js"></script>
+<script src="layers/walls.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>
