@@ -15,6 +15,7 @@
       "thickness": "15 cm",
       "type": "طوب",
       "note": "قابل للتعديل"
+    }
   ],
 
   "electrical": [
@@ -22,6 +23,6 @@
       "id": "main-line",
       "path": "M120 180 L420 180 L420 360",
       "label": "Main Power Line"
-      }
-   ]
+    }
+  ]
 }
